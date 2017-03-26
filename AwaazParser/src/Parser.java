@@ -12,8 +12,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
-    private static final String INPUT_FILE = "C:\\Users\\saran\\Google Drive\\Awaaz\\UW Awaaz 16-17 Music\\Arranging Committee\\CheapThrillsMalangPart2\\CheapThrillsMalangPart2.html";
-    private static final String OUTPUT_FILE = "output.html";
+    private static final String SONG_NAME = "TumSeHi";
+    private static final String ORIGINAL_KEY = "F#";
+    private static final String INPUT_FILE = SONG_NAME + "in" + ORIGINAL_KEY + "/input.html";
+    private static final String OUTPUT_FILE = SONG_NAME + "-output.html";
 
     private static Map<String, String> flatMap;
 
@@ -21,8 +23,8 @@ public class Parser {
             "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"
     };
 
-    private static final int startNote = Arrays.binarySearch(noteArray, "B");
-    private static final int endNote = Arrays.binarySearch(noteArray, "F#");
+    private static final int startNote = Arrays.binarySearch(noteArray, ORIGINAL_KEY);
+    private static final int endNote = Arrays.binarySearch(noteArray, "A");
     private static final int N = endNote - startNote;
 
     public static void main(String[] args) {
