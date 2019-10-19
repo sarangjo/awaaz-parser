@@ -1,2 +1,2 @@
 # awaaz-parser
-Parse Awaaz sheet music.
+Parse and transpose Awaaz sheet music.
